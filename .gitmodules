@@ -1,0 +1,3 @@
+[submodule "ARMmbed-os"]
+	path = ARMmbed-os
+	url = https://github.com/ARMmbed/mbed-os
