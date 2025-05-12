@@ -98,7 +98,7 @@ This project integrates the **STM32 Nucleo F401RE** board with the **Arduino Mul
 
 <h2>📄 Project Report</h2>
 
-<a href="https://github.com/Mazen-Elborhamy/Embedded-Project-/blob/main/Report%20%26%20Video/Embedded%20Project%20report.pdf" target="_blank">
+<a href="https://github.com/OmarMohammed299/Embedded-Project/blob/main/Video%20and%20Report/Report.pdf" target="_blank">
   <img src="https://github.com/OmarMohammed299/Embedded-Project/blob/main/Video%20and%20Report/WhatsApp%20Image%202025-05-13%20at%2001.13.29_22d70351.jpg" alt="Open Project Report" width="300"/>
 </a>
 
