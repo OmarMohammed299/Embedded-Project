@@ -1,73 +1,105 @@
-![](./resources/official_armmbed_example_badge.png)
-# Blinky Mbed OS example
-
-The example project is part of the [Arm Mbed OS Official Examples](https://os.mbed.com/code/) and is the [getting started example for Mbed OS](https://os.mbed.com/docs/mbed-os/latest/quick-start/index.html). It contains an application that repeatedly blinks an LED on supported [Mbed boards](https://os.mbed.com/platforms/).
-
-You can build the project with all supported [Mbed OS build tools](https://os.mbed.com/docs/mbed-os/latest/tools/index.html). However, this example project specifically refers to the command-line interface tools, [Arm Mbed CLI 1](https://github.com/ARMmbed/mbed-cli#installing-mbed-cli) and [Mbed CLI 2](https://github.com/ARMmbed/mbed-tools#installation).
-
-(Note: To see a rendered example you can import into the Arm Online Compiler, please see our [import quick start](https://os.mbed.com/docs/mbed-os/latest/quick-start/online-with-the-online-compiler.html#importing-the-code).)
-
-## Mbed OS build tools
-
-### Mbed CLI 2
-Starting with version 6.5, Mbed OS uses Mbed CLI 2. It uses Ninja as a build system, and CMake to generate the build environment and manage the build process in a compiler-independent manner. If you are working with Mbed OS version prior to 6.5 then check the section [Mbed CLI 1](#mbed-cli-1).
-1. [Install Mbed CLI 2](https://os.mbed.com/docs/mbed-os/latest/build-tools/install-or-upgrade.html).
-1. From the command-line, import the example: `mbed-tools import mbed-os-example-blinky`
-1. Change the current directory to where the project was imported.
-
-### Mbed CLI 1
-1. [Install Mbed CLI 1](https://os.mbed.com/docs/mbed-os/latest/quick-start/offline-with-mbed-cli.html).
-1. From the command-line, import the example: `mbed import mbed-os-example-blinky`
-1. Change the current directory to where the project was imported.
-
-## Application functionality
-
-The `main()` function is the single thread in the application. It toggles the state of a digital output connected to an LED on the board.
-
-**Note**: This example requires a target with RTOS support, i.e. one with `rtos` declared in `supported_application_profiles` in `targets/targets.json` in [mbed-os](https://github.com/ARMmbed/mbed-os). For non-RTOS targets (usually with small memory sizes), please use [mbed-os-example-blinky-baremetal](https://github.com/ARMmbed/mbed-os-example-blinky-baremetal) instead.
-
-## Building and running
-
-1. Connect a USB cable between the USB port on the board and the host computer.
-1. Run the following command to build the example project and program the microcontroller flash memory:
-
-    * Mbed CLI 2
-
-    ```bash
-    $ mbed-tools compile -m <TARGET> -t <TOOLCHAIN> --flash
-    ```
-
-    * Mbed CLI 1
-
-    ```bash
-    $ mbed compile -m <TARGET> -t <TOOLCHAIN> --flash
-    ```
-
-Your PC may take a few minutes to compile your code.
-
-The binary is located at:
-* **Mbed CLI 2** - `./cmake_build/<TARGET>/develop/<TOOLCHAIN>/mbed-os-example-blinky.bin`
-* **Mbed CLI 1** - `./BUILD/<TARGET>/<TOOLCHAIN>/mbed-os-example-blinky.bin`
-
-Alternatively, you can manually copy the binary to the board, which you mount on the host computer over USB.
-
-## Expected output
-The LED on your target turns on and off every 500 milliseconds.
+<p>
+  <img src="https://github.com/OmarMohammed299/Embedded-Project/blob/main/Video%20and%20Report/WhatsApp%20Image%202025-05-13%20at%2000.52.29_bc019460.jpg" alt="Download Icon" width="400" align="left"/>
+</p>
+<br clear="all"/>
 
 
-## Troubleshooting
-If you have problems, you can review the [documentation](https://os.mbed.com/docs/latest/tutorials/debugging.html) for suggestions on what could be wrong and how to fix it.
+<table style="width: 100%; text-align: center; border-collapse: collapse;">
+  <tr>
+    <th style="border: 2px solid black; padding: 10px;">Name</th>
+    <th style="border: 2px solid black; padding: 10px;">ID</th>
+  </tr>
+  <tr>
+    <td style="border: 2px solid black; padding: 10px;">Omar Mohammed Mehany</td>
+    <td style="border: 2px solid black; padding: 10px;">2201058</td>
+  </tr>
+  <tr>
+    <td style="border: 2px solid black; padding: 10px;">Ammar Ahmed Mostafa</td>
+    <td style="border: 2px solid black; padding: 10px;">2200262</td>
+  </tr>
+<tr>
+    <td style="border: 2px solid black; padding: 10px;">Tarek Hazem Salah</td>
+    <td style="border: 2px solid black; padding: 10px;">2200680</td>
+  </tr>
 
-## Related Links
+</table>
 
-* [Mbed OS Stats API](https://os.mbed.com/docs/latest/apis/mbed-statistics.html).
-* [Mbed OS Configuration](https://os.mbed.com/docs/latest/reference/configuration.html).
-* [Mbed OS Serial Communication](https://os.mbed.com/docs/latest/tutorials/serial-communication.html).
-* [Mbed OS bare metal](https://os.mbed.com/docs/mbed-os/latest/reference/mbed-os-bare-metal.html).
-* [Mbed boards](https://os.mbed.com/platforms/).
 
-### License and contributions
 
-The software is provided under Apache-2.0 license. Contributions to this project are accepted under the same license. Please see [CONTRIBUTING.md](./CONTRIBUTING.md) for more info.
 
-This project contains code from other projects. The original license text is included in those source files. They must comply with our license guide.
+# Embedded Project: Real-Time Clock and Voltage Display
+
+## Overview
+This project integrates the **STM32 Nucleo F401RE** board with the **Arduino Multi-Function Shield** to display a **real-time clock (RTC)** and **voltage readings** on a **4-digit 7-segment display**. The voltage is read using a **potentiometer** and displayed when the **S3 switch** is pressed, while the RTC continues tracking elapsed time.
+
+## Features
+- 🕒 **Real-time clock** displayed on the 7-segment display.
+- 🔋 **Voltage display** from a potentiometer when **S3** is pressed.
+- 🔄 **Reset functionality** when **S1** is pressed or after 100 minutes.
+
+## Components
+- **STM32 Nucleo F401RE**
+- **Arduino Multi-Function Shield**
+  - 4-digit 7-segment display
+  - Potentiometer
+  - 3 switches (**S1, S2, S3**)
+
+## Pin Setup
+- **Shift Register Pins** (7-segment display control):
+  - `DigitalOut serPin(D8)`  - Serial Data
+  - `DigitalOut clkPin(D7)`  - Clock
+  - `DigitalOut latchPin(D4)` - Latch
+- **Inputs**:
+  - `AnalogIn voltagePin(A0)`  - Potentiometer
+  - `DigitalIn s1Switch(A1)`   - Reset
+  - `DigitalIn s3Switch(A3)`   - Show Voltage
+
+## Functionality
+- The program runs in **single-threaded mode**, updating the **RTC** every second.
+- Pressing **S3** displays the voltage reading from the potentiometer.
+- Pressing **S1** or reaching **100 minutes** resets the timer to `00:00`.
+
+## Build Instructions
+
+### Option 1: Using **Mbed OS**
+1. **Install Mbed OS**  
+   Follow the official guide: [Mbed OS Installation](https://os.mbed.com/studio/)
+2. **Import the Project**  
+   Clone the repository or download the project files.
+3. **Build and Flash**  
+   Connect your **Nucleo F401RE** board via USB, then run the following command:
+   ```bash
+   mbed compile -m NUCLEO_F401RE -t GCC_ARM --flash
+
+### Option 2: Using **Using Keil MDK**
+1. **Install Keil MDK**  
+   - Download and install Keil MDK from: [Keil MDK](https://www.keil.com/download/)
+2. **Import the Project**  
+   Clone the repository or download the project files- Open Keil uVision.
+- Select Project > Open and browse to your project folder.
+- Import the appropriate .uvprojx file.
+- Compile & Run.
+- Click on Build to compile the program.
+- Connect your Nucleo F401RE via USB.
+- Click Download to flash the program onto the board.
+- Press Run to execute the program.
+3. **Build and Flash**  
+   Connect your **Nucleo F401RE** board via USB, then run the following command:
+   ```bash
+   mbed compile -m NUCLEO_F401RE -t GCC_ARM --flash
+
+## Project Resources
+
+<h2>📹 Project Video </h2>
+
+<a href="https://drive.google.com/file/d/1xihj5X5wrXCdcJjtQfc0rjgoPRfWbtPO/view?usp=sharing">
+  <img src="https://github.com/OmarMohammed299/Embedded-Project/blob/main/Video%20and%20Report/WhatsApp%20Image%202025-05-13%20at%2001.03.10_2032ee3c.jpg" alt="Watch the video" width="300"/>
+</a>
+
+<h2>📄 Project Report</h2>
+
+<a href="https://github.com/Mazen-Elborhamy/Embedded-Project-/blob/main/Report%20%26%20Video/Embedded%20Project%20report.pdf" target="_blank">
+  <img src="https://github.com/OmarMohammed299/Embedded-Project/blob/main/Video%20and%20Report/WhatsApp%20Image%202025-05-13%20at%2001.13.29_22d70351.jpg" alt="Open Project Report" width="300"/>
+</a>
+
+
